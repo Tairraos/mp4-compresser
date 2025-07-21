@@ -1,10 +1,10 @@
 {
-  "name": "mp4-video-processor",
+  "name": "mp4-compresser",
   "version": "1.0.0",
   "description": "A Node.js CLI tool for batch processing MP4 videos with intelligent compression and scaling",
   "main": "index.js",
   "bin": {
-    "mp4-processor": "./index.js"
+    "mp4-compresser": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -31,16 +31,16 @@
     "720p",
     "1280x720"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Tairraos",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mp4-video-processor.git"
+    "url": "https://github.com/Tairraos/mp4-compresser.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/mp4-video-processor/issues"
+    "url": "https://github.com/Tairraos/mp4-compresser.git/issues"
   },
-  "homepage": "https://github.com/yourusername/mp4-video-processor#readme",
+  "homepage": "https://github.com/Tairraos/mp4-compresser.git#readme",
   "files": [
     "index.js",
     "README.md",

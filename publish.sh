@@ -74,7 +74,7 @@ if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
         echo "  npm install -g $(grep '"name"' package.json | cut -d'"' -f4)"
         echo ""
         echo "使用命令:"
-        echo "  mp4-processor"
+        echo "  mp4-compresser"
         echo ""
     else
         echo "❌ 发布失败"

@@ -40,18 +40,18 @@ pnpm install
 2. **在任意目录使用**:
    ```bash
    # 处理当前目录下的MP4文件
-   mp4-processor
+   mp4-compresser
    
    # 指定其他目录
-   mp4-processor -d "/path/to/your/video/directory"
+   mp4-compresser -d "/path/to/your/video/directory"
    
    # 查看帮助
-   mp4-processor --help
+   mp4-compresser --help
    ```
 
 3. **卸载全局命令**:
    ```bash
-   pnpm unlink --global mp4-processor
+   pnpm unlink --global mp4-compresser
    ```
 
 ### 本地使用

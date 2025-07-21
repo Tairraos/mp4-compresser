@@ -83,12 +83,12 @@ class MP4Processor {
     // 目标分辨率：横屏1280x720，竖屏720x1280
     const targetWidth = isLandscape ? 1280 : 720;
     const targetHeight = isLandscape ? 720 : 1280;
-    
+
     // 使用scale和pad滤镜来处理比例问题
     // scale: 缩放到目标尺寸内，保持宽高比
     // pad: 添加黑边到目标尺寸
     const videoFilter = `scale=${targetWidth}:${targetHeight}:force_original_aspect_ratio=decrease,pad=${targetWidth}:${targetHeight}:(ow-iw)/2:(oh-ih)/2:black`;
-    
+
     const command = `ffmpeg -i "${inputPath}" -c:v libx264 -c:a aac -vf "${videoFilter}" "${outputPath}" -y`;
 
     console.log(`开始压缩: ${path.basename(inputPath)} -> ${targetWidth}x${targetHeight}`);
@@ -211,7 +211,7 @@ class MP4Processor {
 
 // 命令行配置
 program
-  .name('mp4-processor')
+  .name('mp4-compresser')
   .description('MP4文件批量处理工具')
   .version('1.0.0')
   .option('-d, --dir <directory>', '指定处理目录')
