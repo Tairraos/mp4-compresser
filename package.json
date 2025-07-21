@@ -1,0 +1,55 @@
+{
+  "name": "mp4-video-processor",
+  "version": "1.0.0",
+  "description": "A Node.js CLI tool for batch processing MP4 videos with intelligent compression and scaling",
+  "main": "index.js",
+  "bin": {
+    "mp4-processor": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "echo \"Preparing for publish...\"",
+    "install-global": "npm link",
+    "uninstall-global": "npm unlink -g"
+  },
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "mp4",
+    "video",
+    "ffmpeg",
+    "compression",
+    "batch-processing",
+    "cli",
+    "video-processing",
+    "scaling",
+    "720p",
+    "1280x720"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mp4-video-processor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mp4-video-processor/issues"
+  },
+  "homepage": "https://github.com/yourusername/mp4-video-processor#readme",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "preferGlobal": true,
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}
