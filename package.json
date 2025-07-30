@@ -1,7 +1,7 @@
 {
   "name": "mp4-compresser",
-  "version": "1.0.0",
-  "description": "A Node.js CLI tool for batch processing MP4 videos with intelligent compression and scaling",
+  "version": "1.1.0",
+  "description": "A Node.js CLI tool for batch processing MP4 videos with intelligent compression, scaling and force compression mode",
   "main": "index.js",
   "bin": {
     "mp4-compresser": "./index.js"
