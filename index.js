@@ -9,11 +9,12 @@ const { program } = require('commander');
 const execAsync = promisify(exec);
 
 class MP4Processor {
-  constructor(targetDir = null) {
+  constructor(targetDir = null, forceCompress = false) {
     this.currentDir = targetDir || process.cwd();
     this.doneDir = path.join(this.currentDir, 'Done');
     this.processedDir = path.join(this.currentDir, 'Processed');
     this.errorDir = path.join(this.currentDir, 'Error');
+    this.forceCompress = forceCompress;
   }
 
   formatFileSize(bytes) {
@@ -125,9 +126,9 @@ class MP4Processor {
     const isLandscape = width > height;
     console.log(`视频方向: ${isLandscape ? '横屏' : '竖屏'}`);
 
-    // 判断是否需要压缩：检查较短边是否大于720
+    // 判断是否需要压缩：检查较短边是否大于720，或者强制压缩模式
     const shorterSide = Math.min(width, height);
-    const needsCompression = shorterSide > 720;
+    const needsCompression = shorterSide > 720 || this.forceCompress;
 
     if (!needsCompression) {
       console.log(`较短边${shorterSide}小于等于720P，直接移动到Done目录`);
@@ -135,7 +136,11 @@ class MP4Processor {
       return;
     }
 
-    console.log(`较短边${shorterSide} > 720，需要压缩`);
+    if (this.forceCompress && shorterSide <= 720) {
+      console.log(`强制压缩模式：较短边${shorterSide} <= 720，仍进行压缩`);
+    } else {
+      console.log(`较短边${shorterSide} > 720，需要压缩`);
+    }
 
     // 压缩视频
     const outputPath = path.join(this.doneDir, fileName);
@@ -179,6 +184,9 @@ class MP4Processor {
   async run() {
     console.log('MP4文件处理工具启动...');
     console.log(`工作目录: ${this.currentDir}`);
+    if (this.forceCompress) {
+      console.log('🔥 强制压缩模式：将压缩所有视频文件');
+    }
 
     // 确保目录存在
     await this.ensureDirectories();
@@ -215,8 +223,9 @@ program
   .description('MP4文件批量处理工具')
   .version('1.0.0')
   .option('-d, --dir <directory>', '指定处理目录')
+  .option('-f, --force', '强制压缩所有视频，包括小于720P的视频')
   .action(async (options) => {
-    const processor = new MP4Processor(options.dir);
+    const processor = new MP4Processor(options.dir, options.force);
     try {
       await processor.run();
     } catch (error) {
