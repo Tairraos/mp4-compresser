@@ -43,24 +43,24 @@ npm install
 2. **Use in any directory**:
    ```bash
    # Process MP4 files in current directory
-   mp4-compresser
+   mp4-compressor
    
    # Specify other directory
-   mp4-compresser -d "/path/to/your/video/directory"
+   mp4-compressor -d "/path/to/your/video/directory"
    
    # Force compress all videos (including those smaller than 720P)
-   mp4-compresser -f
+   mp4-compressor -f
    
    # Combine parameters
-   mp4-compresser -d "/path/to/videos" -f
+   mp4-compressor -d "/path/to/videos" -f
    
    # View help
-   mp4-compresser --help
+   mp4-compressor --help
    ```
 
 3. **Uninstall global command**:
    ```bash
-   npm unlink -g mp4-compresser
+   npm unlink -g mp4-compressor
    ```
 
 ### Local Usage

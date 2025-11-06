@@ -299,7 +299,7 @@ class MP4Processor {
 
 // 命令行配置
 program
-  .name('mp4-compresser')
+  .name('mp4-compressor')
   .description(isChinese ? 'MP4文件批量处理工具' : 'MP4 video batch processing tool')
   .version('1.1.0')
   .option('-d, --dir <directory>', isChinese ? '指定处理目录' : 'Specify processing directory')

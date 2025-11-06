@@ -43,24 +43,24 @@ pnpm install
 2. **在任意目录使用**:
    ```bash
    # 处理当前目录下的MP4文件
-   mp4-compresser
+   mp4-compressor
    
    # 指定其他目录
-   mp4-compresser -d "/path/to/your/video/directory"
+   mp4-compressor -d "/path/to/your/video/directory"
    
    # 强制压缩所有视频（包括小于720P的）
-   mp4-compresser -f
+   mp4-compressor -f
    
    # 组合使用参数
-   mp4-compresser -d "/path/to/videos" -f
+   mp4-compressor -d "/path/to/videos" -f
    
    # 查看帮助
-   mp4-compresser --help
+   mp4-compressor --help
    ```
 
 3. **卸载全局命令**:
    ```bash
-   pnpm unlink --global mp4-compresser
+   pnpm unlink --global mp4-compressor
    ```
 
 ### 本地使用

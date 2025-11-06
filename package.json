@@ -1,10 +1,10 @@
 {
-  "name": "mp4-compresser",
+  "name": "mp4-compressor",
   "version": "1.2.0",
   "description": "A Node.js CLI tool for batch processing MP4 videos with intelligent compression, scaling and force compression mode / MP4视频批量处理工具，支持智能压缩、缩放和强制压缩模式",
   "main": "index.js",
   "bin": {
-    "mp4-compresser": "./index.js"
+    "mp4-compressor": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -35,12 +35,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Tairraos/mp4-compresser.git"
+    "url": "https://github.com/Tairraos/mp4-compressor.git"
   },
   "bugs": {
-    "url": "https://github.com/Tairraos/mp4-compresser.git/issues"
+    "url": "https://github.com/Tairraos/mp4-compressor.git/issues"
   },
-  "homepage": "https://github.com/Tairraos/mp4-compresser.git#readme",
+  "homepage": "https://github.com/Tairraos/mp4-compressor.git#readme",
   "files": [
     "index.js",
     "README.md",
